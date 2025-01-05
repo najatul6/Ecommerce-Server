@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../../models/User');
 
 // register
-const register = async(req,res) => {
+const registerUser = async(req,res) => {
     const {username, email, password} = req.body;
     try{
         const hashedPassword = await bcrypt.hash(password, 12);
@@ -49,4 +49,4 @@ const login = async(req,res) => {
 // auth middleware
 
 
-module.exports = {register}
+module.exports = {registerUser}
