@@ -6,7 +6,7 @@ const User = require('../../models/User');
 const register = async(req,res) => {
     const {username, email, password} = req.body;
     try{
-
+        const hashedPassword = await bcrypt.hash(password, 12);
     }catch(err){
         console.log(err);
         res.status(500).json({
@@ -18,7 +18,18 @@ const register = async(req,res) => {
 
 
 // login
+const login = async(req,res) => {
+    const {username, password} = req.body;
+    try{
 
+    }catch(err){
+        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: "Some error occured"
+        });
+    }
+}
 
 
 // logout
