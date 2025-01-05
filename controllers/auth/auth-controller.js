@@ -1,7 +1,20 @@
-
+const bcrypt = require ('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../../models/User');
 
 // register
+const register = async(req,res) => {
+    const {username, email, password} = req.body;
+    try{
 
+    }catch(err){
+        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: "Some error occured"
+        });
+    }
+}
 
 
 // login
