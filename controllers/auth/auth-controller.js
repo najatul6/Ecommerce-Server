@@ -47,3 +47,6 @@ const login = async(req,res) => {
 
 
 // auth middleware
+
+
+module.exports = {register}
