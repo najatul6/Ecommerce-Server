@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-require('dotenv').config()
+const authRoutes = require("./routes/auth/auth-routes");
 
 // create a database connection
 
